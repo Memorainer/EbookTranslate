@@ -1,21 +1,24 @@
-Here you will find various utilities and patches that help with downloading and maintaining your Creative Cloud apps.
+This script allows you to bypass payment requirements in Creative Cloud Desktop when clicking "Try". It is unnecessary
+to run this script if you have restored the "Install" buttons.
 
-The 'bypass unlicensed disablements' folder contains a script that prevents Adobe from locking unlicensed apps and/or
-initiating a countdown for disablement.
+IMPORTANT: This script assumes you have Microsoft Defender Firewall enabled for your active network, which is default.
 
-The 'restore install buttons [beta]' folder contains patched files which convince Creative Cloud you have a subscription,
-replacing the "Try" buttons with "Install", bypassing any credit card requirements and enabling native installation.
+To use, launch "Patch.bat" and follow the on-screen instructions. For reversal, re-launch "Patch.bat".
 
-The 'bypass payment' folder contains a script rule which bypasses the credit card requirement on the "Try" button via
-a firewall rule.
+Troubleshooting and Info:
+If you have disabled Microsoft Defender Firewall or have your firewalls managed by other network security
+software (i.e. McAfee, Norton, Avast), the payment bypass will not take effect. Consider re-enabling Microsoft
+Defender Firewall temporarily while you download your apps.
 
-Depending on your system configuration, one of these approaches for bypassing payment may work better than the other.
-Start with one of them. If you experience issues, fallback to the other approach. Keeping both methods applied is not
-recommended.
+If Creative Cloud experiences connectivity issues after running the script, re-run it again to reverse the firewall rule,
+launch Creative Cloud Desktop and allow it to load the apps panel, then re-run the script again once it loads and you'll
+be able to download your apps.
 
-More detailed information on usage is included in each folder.
+If you prefer to keep third party network security software managing your firewalls, you can manually create
+an outbound firewall rule in your managing program that disallows "Adobe Desktop Service.exe" from being able
+to access the Internet, located in "C:\Program Files (x86)\Common Files\Adobe\Adobe Desktop Common\ADS".
 
 
 
-The scripts included in this release are portable modules of CCStopper by Eaaasun. See the full release here:
+This is a portable module of CCStopper by Eaaasun. See the full release here:
 github.com/eaaasun/CCStopper
