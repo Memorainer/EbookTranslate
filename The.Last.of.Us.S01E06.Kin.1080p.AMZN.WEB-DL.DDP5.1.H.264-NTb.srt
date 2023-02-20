@@ -1,22 +1,12 @@
-This script allows you to bypass payment requirements in Creative Cloud Desktop when clicking "Try". It is unnecessary
-to run this script if you have restored the "Install" buttons.
+This script will stop any unlicensed app warnings, disablements, or countdown timers you may encounter
+while using your patched applications by blocking licensing & genuine software integrity web requests.
 
-IMPORTANT: This script assumes you have Microsoft Defender Firewall enabled for your active network, which is default.
+Note: several Adobe related endpoints will be written in the "hosts" file. To remove these entries,
+re-run "Patch.bat" and you will be prompted the option for automatic removal.
 
-To use, launch "Patch.bat" and follow the on-screen instructions. For reversal, re-launch "Patch.bat".
-
-Troubleshooting and Info:
-If you have disabled Microsoft Defender Firewall or have your firewalls managed by other network security
-software (i.e. McAfee, Norton, Avast), the payment bypass will not take effect. Consider re-enabling Microsoft
-Defender Firewall temporarily while you download your apps.
-
-If Creative Cloud experiences connectivity issues after running the script, re-run it again to reverse the firewall rule,
-launch Creative Cloud Desktop and allow it to load the apps panel, then re-run the script again once it loads and you'll
-be able to download your apps.
-
-If you prefer to keep third party network security software managing your firewalls, you can manually create
-an outbound firewall rule in your managing program that disallows "Adobe Desktop Service.exe" from being able
-to access the Internet, located in "C:\Program Files (x86)\Common Files\Adobe\Adobe Desktop Common\ADS".
+For manual removal, launch Notepad as administrator, open "hosts" in "C:\Windows\System32\drivers\etc"
+and remove all entries starting with "ic.adobe.com" through "workflow-ui-prod.licensingstack.com".
+Save it in the same directory.
 
 
 
