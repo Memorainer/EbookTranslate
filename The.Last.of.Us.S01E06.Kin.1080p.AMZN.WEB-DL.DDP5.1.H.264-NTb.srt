@@ -1,14 +1,12 @@
-This script will stop any unlicensed app warnings, disablements, or countdown timers you may encounter
-while using your patched applications by blocking licensing & genuine software integrity web requests.
+These patched files will convince Creative Cloud that you have an active subscription to all apps, and replace
+the "Try" button with "Install", allowing you to immediately download your apps & bypass any requests for payment.
 
-Note: several Adobe related endpoints will be written in the "hosts" file. To remove these entries,
-re-run "Patch.bat" and you will be prompted the option for automatic removal.
+To use, place both "AppsPanelBL.dll" and "AppsPanelIL.dll" in the directory
+"C:\Program Files (x86)\Common Files\Adobe\Adobe Desktop Common\AppsPanel", in place of the two existing files.
 
-For manual removal, launch Notepad as administrator, open "hosts" in "C:\Windows\System32\drivers\etc"
-and remove all entries starting with "ic.adobe.com" through "workflow-ui-prod.licensingstack.com".
-Save it in the same directory.
+IMPORTANT: Make a backup of the originals; do not override them directly.
 
+The patch should take effect the next time Creative Cloud is launched. If it doesn't, restart your PC.
 
-
-This is a portable module of CCStopper by Eaaasun. See the full release here:
-github.com/eaaasun/CCStopper
+Creative Cloud may experience performance issues on startup and prompt you to relaunch the app or restart your PC.
+These messages can be safely ignored; give it time and it will eventually load.
